@@ -1,0 +1,23 @@
+{
+  "name": "serverless-typescript-template",
+  "author": "Chanlito Hem <chanlitohem@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "sls offline start"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.6"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.5",
+    "@types/node": "8.10.17",
+    "@types/webpack": "^4.4.0",
+    "fork-ts-checker-webpack-plugin": "^0.4.1",
+    "serverless-offline": "^3.24.5",
+    "serverless-webpack": "^5.1.5",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.10.2"
+  }
+}
