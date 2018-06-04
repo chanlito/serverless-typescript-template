@@ -1,5 +1,5 @@
 service:
-  name: aws-nodejs-typescript
+  name: serverless-typescript-template
 
 provider:
   name: aws
@@ -15,15 +15,12 @@ custom:
     webpackConfig: 'webpack.config.ts'
 
 functions:
-  hello:
-    handler: handler.hello
+  authorizer:
+    handler: functions/authorizer.default
+  index:
+    handler: functions/handler.default
     events:
       - http:
           method: get
-          path: hello
-  api:
-    handler: api.api
-    events:
-      - http:
-          method: get
-          path: api
+          path: /
+          authorizer: authorizer

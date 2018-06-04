@@ -1,9 +1,9 @@
 import * as path from 'path';
 import * as webpack from 'webpack';
-const slsw = require('serverless-webpack');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+import * as slsw from 'serverless-webpack';
+import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
-const config: webpack.Configuration = {
+module.exports = {
   mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
   devtool: 'source-map',
   target: 'node',
@@ -35,6 +35,4 @@ const config: webpack.Configuration = {
     ],
   },
   plugins: [new ForkTsCheckerWebpackPlugin()],
-};
-
-export default config;
+} as webpack.Configuration;
